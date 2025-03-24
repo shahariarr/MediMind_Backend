@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title></title>
 
-    <link rel="icon" type="image/x-icon" href="{{asset('/favicon.ico')}}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/images (1).png') }}" />
     <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" />
     <link href="{{asset('css/animate.min.css')}}" rel="stylesheet" />
     <link href="{{asset('css/fontawesome.css')}}" rel="stylesheet" />
@@ -45,7 +45,7 @@
             <span class="icon-nav m-0 h5" onclick="MenuBarClickHandler()">
                 <img class="nav-logo-sm mx-2"  src="{{asset('images/menu.svg')}}" alt="logo"/>
             </span>
-            <img class="nav-logo  mx-2"  src="{{asset('images/logo.png')}}" alt="logo"/>
+            <img class="nav-logo  mx-4"  src="{{ asset('images/images (1).png') }}" alt="logo"/>
         </a>
 
         <div class="float-right h-auto d-flex">
@@ -72,12 +72,12 @@
 
 <div id="sideNavRef" class="side-nav-open">
 
-    <a href="{{url("/dashboard")}}" class="side-bar-item">
+    <a href="{{url('/userProfile')}}" class="side-bar-item">
         <i class="bi bi-graph-up"></i>
         <span class="side-bar-item-caption">Dashboard</span>
     </a>
 
-    <a href="{{url("/customerPage")}}" class="side-bar-item">
+    {{-- <a href="{{url("/customerPage")}}" class="side-bar-item">
         <i class="bi bi-people"></i>
         <span class="side-bar-item-caption">Customer</span>
     </a>
@@ -105,7 +105,7 @@
     <a href="{{url('/reportPage')}}" class="side-bar-item">
         <i class="bi bi-file-earmark-bar-graph"></i>
         <span class="side-bar-item-caption">Report</span>
-    </a>
+    </a> --}}
 
 
 </div>
