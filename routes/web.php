@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\MedicineController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,39 +16,12 @@ Route::post('/send-otp',[UserController::class,'SendOTPCode']);
 Route::post('/verify-otp',[UserController::class,'VerifyOTP']);
 Route::post('/reset-password',[UserController::class,'ResetPassword'])->middleware('auth:sanctum');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Customer Web API Routes
-Route::post("/create-customer",[CustomerController::class,'CustomerCreate'])->middleware('auth:sanctum');
-Route::get("/list-customer",[CustomerController::class,'CustomerList'])->middleware('auth:sanctum');
-Route::post("/delete-customer",[CustomerController::class,'CustomerDelete'])->middleware('auth:sanctum');
-Route::post("/update-customer",[CustomerController::class,'CustomerUpdate'])->middleware('auth:sanctum');
-Route::post("/customer-by-id",[CustomerController::class,'CustomerByID'])->middleware('auth:sanctum');
-
+// Medicine Web API Routes
+Route::post("/create-medicine",[MedicineController::class,'MedicineCreate'])->middleware('auth:sanctum');
+Route::get("/list-medicine",[MedicineController::class,'MedicineList'])->middleware('auth:sanctum');
+Route::post("/medicine-by-id",[MedicineController::class,'MedicineByID'])->middleware('auth:sanctum');
+Route::post("/update-medicine",[MedicineController::class,'MedicineUpdate'])->middleware('auth:sanctum');
+Route::post("/delete-medicine",[MedicineController::class,'MedicineDelete'])->middleware('auth:sanctum');
 
 
 
@@ -60,8 +34,6 @@ Route::view('/verifyOtp','pages.auth.verify-otp-page');
 Route::view('/resetPassword','pages.auth.reset-pass-page');
 Route::view('/userProfile','pages.dashboard.profile-page');
 
-
 Route::view('/categoryPage','pages.dashboard.category-page');
 Route::view('/customerPage','pages.dashboard.customer-page');
-
-
+Route::view('/medicinePage','pages.dashboard.medicine-page');
